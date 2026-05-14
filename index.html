@@ -1,81 +1,260 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="宋雨轩为肾友提供的食物钾磷含量查询网站">
-  <link rel="icon" href="./favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-  <meta name="build-time" content="build-260216.6yomuu">
-  <title>肾友食物钾磷含量查询</title>
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?7ba5e4e953d7b220da56f52f6996ca9e";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>站点迁移通知</title>
+    <!-- 极简干净，移动优先 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-  <script type="module" crossorigin src="./assets/index-BI5vsh6B.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/vue-vendor.7UYJ6OAp.js">
-  <link rel="modulepreload" crossorigin href="./assets/vconsole.CQ_a14AQ.js">
-  <link rel="modulepreload" crossorigin href="./assets/vant-ui.DE2dyczV.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-CLT1LGKp.css">
+        body {
+            min-height: 100vh;
+            background: linear-gradient(155deg, #f9fbfd 0%, #edf2f7 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem;
+            /* 让背景有呼吸感 */
+            background-attachment: fixed;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.80);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 52px 52px 44px 44px;
+            box-shadow: 0 24px 52px rgba(0, 0, 0, 0.05), 0 8px 20px rgba(0, 0, 0, 0.02), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+            padding: 2.6rem 2rem 2.8rem;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .icon-pin {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .icon-pin svg {
+            width: 44px;
+            height: 44px;
+            fill: #e97c3a;
+            opacity: 0.8;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f79e6a20;
+            color: #b45f2e;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            border: 0.5px solid rgba(233, 124, 58, 0.15);
+            margin-bottom: 1.0rem;
+        }
+
+        .title {
+            font-size: 1.9rem;
+            font-weight: 540;
+            letter-spacing: -0.02em;
+            color: #1f293b;
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+
+        .title span {
+            background: linear-gradient(135deg, #d4743a, #b15522);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .desc {
+            font-size: 1rem;
+            color: #3d4e62;
+            font-weight: 380;
+            line-height: 1.6;
+            padding: 0 0.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .desc strong {
+            font-weight: 520;
+            color: #1f2e40;
+        }
+
+        .reason-box {
+            background: rgba(233, 124, 58, 0.06);
+            border-left: 4px solid #e97c3a;
+            border-radius: 20px;
+            padding: 0.9rem 1.2rem;
+            margin: 1.6rem 0 1.8rem;
+            font-size: 0.85rem;
+            color: #4a5a6e;
+            text-align: left;
+            line-height: 1.6;
+            backdrop-filter: blur(4px);
+        }
+
+        .reason-box svg {
+            width: 16px;
+            height: 16px;
+            fill: #e97c3a;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+
+        .new-address {
+            background: #1f293b;
+            border-radius: 60px;
+            padding: 1.1rem 0.5rem;
+            margin: 1.2rem 0 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: background 0.2s;
+        }
+
+        .new-address a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 480;
+            letter-spacing: 0.01em;
+            word-break: break-all;
+            display: block;
+            padding: 0 0.4rem;
+            line-height: 1.4;
+        }
+
+        .new-address a:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+
+        .btn-visit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #e97c3a;
+            border: none;
+            border-radius: 60px;
+            padding: 0.9rem 2.4rem;
+            font-size: 1.1rem;
+            font-weight: 540;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+            box-shadow: 0 6px 16px rgba(233, 124, 58, 0.25);
+            text-decoration: none;
+            width: auto;
+            min-width: 200px;
+            touch-action: manipulation;
+            user-select: none;
+            margin: 0.6rem 0 0.8rem;
+        }
+
+        .btn-visit:active {
+            transform: scale(0.95);
+            box-shadow: 0 3px 8px rgba(233, 124, 58, 0.2);
+            background: #d46d2e;
+        }
+
+        .btn-visit svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .footnote {
+            font-size: 0.75rem;
+            color: #7a8b9e;
+            margin-top: 1.8rem;
+            opacity: 0.7;
+            letter-spacing: 0.2px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.2rem;
+        }
+
+        .footnote a {
+            color: #e97c3a;
+            text-decoration: none;
+            font-weight: 450;
+        }
+
+        /* 微调 */
+        @media (max-width: 380px) {
+            .card {
+                padding: 2rem 1.2rem 2.2rem;
+                border-radius: 40px;
+            }
+            .title {
+                font-size: 1.6rem;
+            }
+            .new-address a {
+                font-size: 0.85rem;
+            }
+            .btn-visit {
+                padding: 0.8rem 1.8rem;
+                font-size: 1rem;
+                min-width: 160px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <noscript>
-    <div
-      style="box-sizing: border-box;display: flex;padding: 32px 0;flex-direction: column;align-items: center;justify-items: center;">
-      <div class="rain-home-error-img" style=" width: 160px;height: 160px;"><svg viewBox="0 0 160 160">
-          <defs>
-            <linearGradient x1="50%" x2="50%" y2="100%" id="van-empty-9-8">
-              <stop stop-color="#EAEDF1" offset="0%"></stop>
-              <stop stop-color="#DCDEE0" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <defs>
-            <linearGradient id="van-empty-9-a" x1="64%" y1="100%" x2="64%">
-              <stop stop-color="#FFF" offset="0%" stop-opacity="0.5"></stop>
-              <stop stop-color="#F2F3F5" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <g opacity=".8">
-            <path d="M36 131V53H16v20H2v58h34z" fill="url(#van-empty-9-a)"></path>
-            <path d="M123 15h22v14h9v77h-31V15z" fill="url(#van-empty-9-a)"></path>
-          </g>
-          <defs>
-            <linearGradient id="van-empty-9-b" x1="64%" y1="97%" x2="64%" y2="0%">
-              <stop stop-color="#F2F3F5" offset="0%" stop-opacity="0.3"></stop>
-              <stop stop-color="#F2F3F5" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <g opacity=".8">
-            <path d="M87 6c3 0 7 3 8 6a8 8 0 1 1-1 16H80a7 7 0 0 1-8-6c0-4 3-7 6-7 0-5 4-9 9-9Z"
-              fill="url(#van-empty-9-b)"></path>
-            <path d="M19 23c2 0 3 1 4 3 2 0 4 2 4 4a4 4 0 0 1-4 3v1h-7v-1l-1 1c-2 0-3-2-3-4 0-1 1-3 3-3 0-2 2-4 4-4Z"
-              fill="url(#van-empty-9-b)"></path>
-          </g>
-          <defs>
-            <radialGradient id="van-empty-9-c" cx="50%" cy="54%" fx="50%" fy="54%" r="297%"
-              gradientTransform="matrix(-.16 0 0 -.33 .58 .72)">
-              <stop stop-color="#EBEDF0" offset="0%"></stop>
-              <stop stop-color="#F2F3F5" offset="100%" stop-opacity="0.3"></stop>
-            </radialGradient>
-          </defs>
-          <ellipse fill="url(#van-empty-9-c)" opacity=".8" cx="80" cy="140" rx="46" ry="8"></ellipse>
-          <path d="m59 60 21 21 21-21h3l9 9v3L92 93l21 21v3l-9 9h-3l-21-21-21 21h-3l-9-9v-3l21-21-21-21v-3l9-9h3Z"
-            fill="url(#van-empty-9-8)"></path>
-        </svg></div>
-      <p class="rain-home-error" style="color:#969799;font-size:14px;margin-top:16px">
-        很抱歉，您的浏览器不支持JavaScript或已禁用JavaScript。 </p>
+    <div class="card">
+        <!-- 小旗帜 / 迁移图标 -->
+        <div class="icon-pin">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4h-3V3a1 1 0 0 0-2 0v1H5a1 1 0 0 0-.8 1.6L7.5 10l-3.3 4.4A1 1 0 0 0 5 16h10v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .8-1.6L17.5 10l3.3-4.4A1 1 0 0 0 20 4zM15 14H6.5l2.7-3.6a1 1 0 0 0 0-1.2L6.5 6H15v8z"/>
+            </svg>
+        </div>
+
+        <div class="badge">📢 食物钾磷含量查询</div>
+
+        <h1 class="title">站点迁移通知</h1>
+
+        <p class="desc">
+            由于 <strong>GitHub Pages</strong> 在一些网络环境下<br>访问不稳定，我们已将站点迁移至新服务器。
+        </p>
+
+        <div class="reason-box">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
+            <span><strong>原因说明：</strong> github.io 域名在部分地区与网络环境下出现间歇性无法访问，为了提供更稳定、快速的服务，我们迁移至专属服务器。</span>
+        </div>
+
+        <!-- 新地址展示区域（卡片式） -->
+        <div class="new-address">
+            <a href="#"  rel="noopener noreferrer">
+                🔗 新地址请联系宋雨轩索取
+            </a>
+        </div>
+
+        <!-- 访问按钮 -->
+        <!-- <a href="https://food.nas.syx0226.top:8735/" class="btn-visit" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+            前往新站点
+        </a> -->
+
+        <div class="footnote">
+            雨落无声 · 2026
+           
+        </div>
     </div>
-  </noscript>
-  <div id="app">
-
-  </div>
 </body>
-
 </html>
